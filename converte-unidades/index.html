@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        html,
+        body {
+            background: #5433FF;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #A5FECB, #20BDFF, #5433FF);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #A5FECB, #20BDFF, #5433FF);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            font: 14px 'Roboto', sans-serif;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+
+            -webkit-font-smoothing: antialiased;
+        }
+
+        input,
+        button {
+            padding: 0 15px;
+            outline: 0;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            height: 44px;
+
+            font-family: 'Roboto', sans-serif;
+        }
+
+        button {
+            font-size: 16px;
+            font-weight: bold;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #aaa;
+        }
+
+        .container {
+            height: 100%;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .container>div {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+
+            padding: 30px;
+            background-color: white;
+            border-radius: 5px;
+            -webkit-box-shadow: 2px 3px 43px -16px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 2px 3px 43px -16px rgba(0, 0, 0, 0.75);
+            box-shadow: 2px 3px 43px -16px rgba(0, 0, 0, 0.75);
+        }
+
+        .container>div {
+            margin: 20px 5px;
+
+        }
+
+        .container>div>div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 18px;
+            text-align: center;
+            margin: 0;
+            margin-bottom: 30px;
+            padding: 0;
+        }
+
+        span {
+            font-size: 20px;
+            align-self: center;
+            font-weight: 400;
+            margin: 0;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h1>Decimal > Octal</h1>
+            <div>
+                <input type="text" id="input-dec-to-oct" placeholder="Insira um decimal" />
+                <button type="button"
+                    onclick="decimalToOctal(document.querySelector('#input-dec-to-oct').value)">Calcular</button>
+            </div>
+            <span id="dec-to-oct">0</span>
+        </div>
+
+
+        <div>
+            <h1>Octal > Decimal</h1>
+            <div>
+                <input type="text" placeholder="Insira um octal" id="input-oct-to-dec" />
+                <button type="button"
+                    onclick="octalToDecimal(document.querySelector('#input-oct-to-dec').value)">Calcular</button>
+            </div>
+            <span id="oct-to-dec">0</span>
+        </div>
+
+        <div>
+            <h1>Binário > Decimal</h1>
+            <div>
+                <input type="text" placeholder="Insira um octal" id="input-bin-to-dec" />
+                <button type="button"
+                    onclick="binarioToDecimal(document.querySelector('#input-bin-to-dec').value)">Calcular</button>
+            </div>
+            <span id="bin-to-dec">0</span>
+        </div>
+
+        <div>
+            <h1>Decimal > Binário</h1>
+            <div>
+                <input type="text" id="input-dec-to-bin" placeholder="Insira um decimal" />
+                <button type="button"
+                    onclick="decimalToBinario(document.querySelector('#input-dec-to-bin').value)">Calcular</button>
+            </div>
+            <span id="dec-to-bin">0</span>
+        </div>
+
+        <div>
+            <h1>Hexadecimal > Decimal</h1>
+            <div>
+                <input type="text" id="input-hex-to-dec" placeholder="Insira um hexadecimal" />
+                <button type="button"
+                    onclick="hexadecimalToDecimal(document.querySelector('#input-hex-to-dec').value)">Calcular</button>
+            </div>
+            <span id="hex-to-dec">0</span>
+        </div>
+
+        <div>
+            <h1>Decimal > Hexadecimal</h1>
+            <div>
+                <input type="text" id="input-dec-to-hex" placeholder="Insira um decimal" />
+                <button type="button"
+                    onclick="decimalToHexadecimal(document.querySelector('#input-dec-to-hex').value)">Calcular</button>
+            </div>
+            <span id="dec-to-hex">0</span>
+        </div>
+    </div>
+    <script src="conversor.js"></script>
+
+</body>
+
+</html>
